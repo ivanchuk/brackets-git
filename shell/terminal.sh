@@ -11,4 +11,7 @@ then
 elif command -v xterm >/dev/null 2>&1
 then
     xterm -e 'cd $1 && bash'
+elif command -v pantheon-terminal >/dev/null 2>&1
+then
+    pantheon-terminal --working-directory="$1"
 fi
