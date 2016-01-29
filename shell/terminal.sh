@@ -2,6 +2,9 @@
 if command -v gnome-terminal >/dev/null 2>&1
 then
     gnome-terminal --window --working-directory="$1"
+elif command -v pantheon-terminal >/dev/null 2>&1
+then
+    pantheon-terminal --working-directory="$1"
 elif command -v konsole >/dev/null 2>&1
 then
     konsole --workdir "$1"
